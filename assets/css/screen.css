@@ -32,7 +32,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #fff;
+    background: #fffadb;
 }
 
 .img {
@@ -114,7 +114,7 @@ body {
     margin-top: 64px;
     padding-bottom: 12px;
     color: #fff;
-    background: #c60c30 no-repeat center center;
+    background: var(--red) no-repeat center center;
     background-size: cover;
 }
 
@@ -140,7 +140,7 @@ body {
     z-index: 10;
     display: block;
     height: 140px;
-    background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background: linear-gradient(rgba(0,0,0,0.15),var(--darkred));
 }
 
 .site-header-background.no-image:before,
@@ -316,7 +316,7 @@ body {
     .site-header-background:not(.responsive-header-img) .site-nav:after,
     .site-nav-main .site-nav:after {
         right: 0;
-        background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+        background: linear-gradient(to right, color(#900 l(-5%) a(0)) 0%,color(#900 l(-5%)) 100%);
     }
 
     .nav li:last-of-type {
@@ -578,7 +578,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     flex-wrap: wrap;
     margin: 0 -20px;
     padding: 50px 0 0;
-    background: #fff;
 }
 
 .post-card {
@@ -2800,8 +2799,16 @@ Usage (In Ghost editor):
         opacity: 0.9;
     }
 
+    .site-header-background {
+        background: var(--darkred);
+    }
+
     .site-header-background:before {
         background: rgba(0,0,0,0.6);
+    }
+
+    .site-nav-main {
+        background: var(--darkred)
     }
 
     .post-feed {
